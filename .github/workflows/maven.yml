@@ -31,9 +31,8 @@ jobs:
         run: mvn -B package --file pom.xml
 
       - name: Run SonarQube
-        run: |
-          set -x
-          npx sonarqube-scanner \
+        run:
+          mvn sonarqube-scanner \
             -Dsonar.projectKey=hello-nhn \
             -Dsonar.host.url=http://133.186.223.228:9000 \
             -Dsonar.login=89813d8a9e0f2f04754c2fd5d13853b518acbf53
