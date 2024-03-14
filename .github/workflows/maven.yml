@@ -32,6 +32,7 @@ jobs:
 
       - name: Run SonarQube
         run: |
+          set -x
           npx sonarqube-scanner \
             -Dsonar.projectKey=hello-nhn \
             -Dsonar.host.url=http://133.186.223.228:9000 \
